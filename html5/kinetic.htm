@@ -1,0 +1,42 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<style>
+			body {
+				margin: 0px;
+				padding: 0px;
+			}
+			.kineticjs-content {
+				border: 1px solid;
+			}
+		</style>
+		<script src="js/jqueryd.js"></script>
+		
+	</head>
+	<body>
+		<div id="container"></div>	
+<script src="js/kinetic.js"></script>
+		<script>
+			var stage = Kinetic.Stage({
+				container: 'container',
+				width: 150,
+				height: 200
+			});
+			
+			var layer = Kinetic.Layer();
+			
+			var rect = Kinetic.Rect({
+				x: 0,
+				y: 0,
+				width: 250,
+				height: 300,
+				stroke: 'black',
+				strokeWidth: 2
+			});
+			
+			layer.add(rect);
+			stage.add(layer);
+		</script>		
+	</body>
+</html>

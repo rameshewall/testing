@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Color Switcher</title>
+    <link href="css/global.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/jquery.css" rel="stylesheet" type="text/css" media="screen">
+    <script type="text/javascript" src="js/jquery-1.js"></script>
+    <script type="text/javascript" src="js/product-color.js"></script>
+  </head>
+  <body id="product">
+    <div class="page" style="margin-top:30px;">
+    <div id="main_center_column">
+      <!-- Center -->
+      <div id="center_column">
+        <div id="primary_block" class="clearfix" style="padding-top: 0px;">
+          <div id="product_full_element">
+            <div style="width: 330px; margin:0 auto; position: relative; padding: 4px 4px 0px 4px; border:1px solid #C0C0C0;">
+              <!-- Customizable products -->
+              <!-- end Customizable products -->
+              <!-- colors good switcher -->
+              <script type="text/javascript">
+                var HTML5isFlip = false;
+                var HTML5canFlip = true;					
+								var HTML5ColorAttributeGroup = new Array();
+                var HTML5AttributeGroup = new Array();
+                HTML5AttributeGroup[9] = 1;
+                HTML5ColorAttributeGroup[157] = new Array(9 , 255 , 255 , 255 , 'White - FFFFFF');HTML5ColorAttributeGroup[159] = new Array(9 , 0 , 0 , 0 , 'Black - 000000');HTML5ColorAttributeGroup[160] = new Array(9 , 148 , 148 , 148 , 'Dark Grey - 949494');HTML5ColorAttributeGroup[161] = new Array(9 , 167 , 170 , 176 , 'Grey - a7aab0');HTML5ColorAttributeGroup[162] = new Array(9 , 139 , 0 , 0 , 'Dark Red - 8B0000');HTML5ColorAttributeGroup[163] = new Array(9 , 149 , 0 , 62 , 'Cardinal Red - B81832');HTML5ColorAttributeGroup[164] = new Array(9 , 255 , 0 , 0 , 'Red - FF0000');HTML5ColorAttributeGroup[166] = new Array(9 , 226 , 78 , 48 , 'Poppy Red - E24E30');HTML5ColorAttributeGroup[167] = new Array(9 , 231 , 87 , 35 , 'Tomato Red - E75723');HTML5ColorAttributeGroup[168] = new Array(9 , 255 , 127 , 0 , 'Orange - FF7F00');HTML5ColorAttributeGroup[169] = new Array(9 , 252 , 194 , 0 , 'Sunflower Yellow - FCC200');HTML5ColorAttributeGroup[170] = new Array(9 , 255 , 211 , 0 , 'Primrose Yellow - FFD300');HTML5ColorAttributeGroup[171] = new Array(9 , 253 , 223 , 1 , 'Yellow - FDDF01');HTML5ColorAttributeGroup[172] = new Array(9 , 255 , 255 , 0 , 'Light Yellow - FFFF00');HTML5ColorAttributeGroup[173] = new Array(9 , 1 , 110 , 55 , 'Forest Green - 016E37');HTML5ColorAttributeGroup[174] = new Array(9 , 40 , 138 , 87 , 'Green - 288A57');HTML5ColorAttributeGroup[175] = new Array(9 , 74 , 182 , 71 , 'Bright Green - 4AB647');HTML5ColorAttributeGroup[176] = new Array(9 , 62 , 187 , 121 , 'Kelly Green - 3EBB79');HTML5ColorAttributeGroup[177] = new Array(9 , 142 , 251 , 64 , 'Lime Green - 8EFB40');HTML5ColorAttributeGroup[178] = new Array(9 , 52 , 102 , 113 , 'Dark Ivy - 346671');HTML5ColorAttributeGroup[179] = new Array(9 , 96 , 160 , 146 , 'Teal - 60A092');HTML5ColorAttributeGroup[180] = new Array(9 , 96 , 165 , 181 , 'Aquamarine - 60A5B5');HTML5ColorAttributeGroup[181] = new Array(9 , 8 , 69 , 126 , 'sapphire blue - 08457E');HTML5ColorAttributeGroup[182] = new Array(9 , 0 , 71 , 171 , 'Intense Blue - 0047AB');HTML5ColorAttributeGroup[183] = new Array(9 , 56 , 162 , 255 , 'Medium Blue - 3674BF');HTML5ColorAttributeGroup[184] = new Array(9 , 171 , 215 , 250 , 'Light Blue - ABD7FA');HTML5ColorAttributeGroup[185] = new Array(9 , 148 , 0 , 211 , 'Violet - 9400D3');HTML5ColorAttributeGroup[187] = new Array(9 , 245 , 180 , 202 , 'Pink - F5B4CA');HTML5ColorAttributeGroup[189] = new Array(9 , 135 , 85 , 0 , 'Coffee Brown - 736155');HTML5ColorAttributeGroup[194] = new Array(9 , 171 , 97 , 0 , ' Brown -8b4f00');HTML5ColorAttributeGroup[191] = new Array(9 , 211 , 179 , 0 , 'Gold - d3b300');HTML5ColorAttributeGroup[190] = new Array(9 , 192 , 192 , 192 , 'Silver - C0C0C0');HTML5ColorAttributeGroup[192] = new Array(9 , 211 , 255 , 184 , 'Luminescent - d3ffb8');		
+                
+                //<![CDATA[ 
+								window.onload=function(){
+								// le canevas1
+						
+								var canvas = document.getElementById('canvas9'),
+								ctx = canvas.getContext('2d'),
+								myimg = document.getElementById('html5image9');
+								ctx.drawImage(myimg,0,0);
+								var imgd = ctx.getImageData(0, 0, 330, 248), pix = imgd.data;
+						
+													
+								var uniqueColor = [148,148,148];
+								var colorname = 'Dark Grey - 949494';
+								$('[id=Color_9_160]').css('border-color', '#000000');
+											
+								for (var i = 0, n = pix.length; i <n; i += 4) {
+									pix[i] = uniqueColor[0];   // Red
+									pix[i+1] = uniqueColor[2]; // VGreen
+									pix[i+2] = uniqueColor[1]; // Blue
+								}
+						
+								ctx.putImageData(imgd, 0, 0);
+								$("#Html5Groupname_9").text(colorname);
+																			
+						
+								// BG colour
+								ctx.putImageData(imgd, 0, 0);
+								var canvas = document.getElementById("canvas0"),
+								ctx = canvas.getContext("2d"),
+								myimg = document.getElementById("bgimage");
+								ctx.drawImage(myimg,0,0);
+						
+								HTML5ColorFlipAround();
+								HTML5ColorSwitch(0,31,192,192,192,'Silver - C0C0C0');
+								}
+							//]]>  
+              </script>		
+							
+              <div id="MyProductColorSwitcher" style="width:330px;">
+                <div style="position:relative; width:330px; height:248px;">
+                  <canvas id="canvas0" style="z-index: 1; position:absolute; left:0px; top:0px;" width="330" height="248"></canvas>
+                  <canvas id="canvas9" style="z-index: 1; position:absolute; left:0px; top:0px;" width="330" height="248"></canvas>
+                </div>
+                <div style="position:relative; width:330px; margin-top: 5px;">
+                  <div id="Html5Group_9" class="Html5GroupColorPickers">
+                    <h4 class="Html5GroupName">Preview color for <span id="Html5Groupname_9">Light Yellow - FFFF00</span></h4>
+                    <div style="clear:both;"></div>
+                    <div id="Html5Group_9_colors" class="Html5GroupColors">
+                      <div id="Color_9_157" style="width:18px; height:18px; float:left;background-color:#FFFFFF;border:1px solid #f0f0f0; cursor:crosshair;" alt="White - FFFFFF" title="White - FFFFFF" onclick="HTML5ColorSwitch(9,157,255,255,255,'White - FFFFFF');"></div>
+                      <div id="Color_9_159" style="width:18px; height:18px; float:left;background-color:#000000;border:1px solid #f0f0f0; cursor:crosshair;" alt="Black - 000000" title="Black - 000000" onclick="HTML5ColorSwitch(9,159,0,0,0,'Black - 000000');"></div>
+                      <div id="Color_9_160" style="width: 18px; height: 18px; float: left; background-color: rgb(148, 148, 148); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Dark Grey - 949494" title="Dark Grey - 949494" onclick="HTML5ColorSwitch(9,160,148,148,148,'Dark Grey - 949494');"></div>
+                      <div id="Color_9_161" style="width:18px; height:18px; float:left;background-color:#a7aab0;border:1px solid #f0f0f0; cursor:crosshair;" alt="Grey - a7aab0" title="Grey - a7aab0" onclick="HTML5ColorSwitch(9,161,167,170,176,'Grey - a7aab0');"></div>
+                      <div id="Color_9_162" style="width: 18px; height: 18px; float: left; background-color: rgb(139, 0, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Dark Red - 8B0000" title="Dark Red - 8B0000" onclick="HTML5ColorSwitch(9,162,139,0,0,'Dark Red - 8B0000');"></div>
+                      <div id="Color_9_163" style="width:18px; height:18px; float:left;background-color:#95003e;border:1px solid #f0f0f0; cursor:crosshair;" alt="Cardinal Red - B81832" title="Cardinal Red - B81832" onclick="HTML5ColorSwitch(9,163,149,0,62,'Cardinal Red - B81832');"></div>
+                      <div id="Color_9_164" style="width: 18px; height: 18px; float: left; background-color: rgb(255, 0, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Red - FF0000" title="Red - FF0000" onclick="HTML5ColorSwitch(9,164,255,0,0,'Red - FF0000');"></div>
+                      <div id="Color_9_166" style="width: 18px; height: 18px; float: left; background-color: rgb(226, 78, 48); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Poppy Red - E24E30" title="Poppy Red - E24E30" onclick="HTML5ColorSwitch(9,166,226,78,48,'Poppy Red - E24E30');"></div>
+                      <div id="Color_9_167" style="width:18px; height:18px; float:left;background-color:#E75723;border:1px solid #f0f0f0; cursor:crosshair;" alt="Tomato Red - E75723" title="Tomato Red - E75723" onclick="HTML5ColorSwitch(9,167,231,87,35,'Tomato Red - E75723');"></div>
+                      <div id="Color_9_168" style="width:18px; height:18px; float:left;background-color:#FF7F00;border:1px solid #f0f0f0; cursor:crosshair;" alt="Orange - FF7F00" title="Orange - FF7F00" onclick="HTML5ColorSwitch(9,168,255,127,0,'Orange - FF7F00');"></div>
+                      <div id="Color_9_169" style="width:18px; height:18px; float:left;background-color:#FCC200;border:1px solid #f0f0f0; cursor:crosshair;" alt="Sunflower Yellow - FCC200" title="Sunflower Yellow - FCC200" onclick="HTML5ColorSwitch(9,169,252,194,0,'Sunflower Yellow - FCC200');"></div>
+                      <div id="Color_9_170" style="width:18px; height:18px; float:left;background-color:#FFD300;border:1px solid #f0f0f0; cursor:crosshair;" alt="Primrose Yellow - FFD300" title="Primrose Yellow - FFD300" onclick="HTML5ColorSwitch(9,170,255,211,0,'Primrose Yellow - FFD300');"></div>
+                      <div id="Color_9_171" style="width: 18px; height: 18px; float: left; background-color: rgb(253, 223, 1); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Yellow - FDDF01" title="Yellow - FDDF01" onclick="HTML5ColorSwitch(9,171,253,223,1,'Yellow - FDDF01');"></div>
+                      <div id="Color_9_172" style="width: 18px; height: 18px; float: left; background-color: rgb(255, 255, 0); border: 1px solid rgb(0, 0, 0); cursor: crosshair;" alt="Light Yellow - FFFF00" title="Light Yellow - FFFF00" onclick="HTML5ColorSwitch(9,172,255,255,0,'Light Yellow - FFFF00');"></div>
+                      <div id="Color_9_173" style="width:18px; height:18px; float:left;background-color:#016E37;border:1px solid #f0f0f0; cursor:crosshair;" alt="Forest Green - 016E37" title="Forest Green - 016E37" onclick="HTML5ColorSwitch(9,173,1,110,55,'Forest Green - 016E37');"></div>
+                      <div id="Color_9_174" style="width:18px; height:18px; float:left;background-color:#288A57;border:1px solid #f0f0f0; cursor:crosshair;" alt="Green - 288A57" title="Green - 288A57" onclick="HTML5ColorSwitch(9,174,40,138,87,'Green - 288A57');"></div>
+                      <div id="Color_9_175" style="width: 18px; height: 18px; float: left; background-color: rgb(74, 182, 71); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Bright Green - 4AB647" title="Bright Green - 4AB647" onclick="HTML5ColorSwitch(9,175,74,182,71,'Bright Green - 4AB647');"></div>
+                      <div id="Color_9_176" style="width:18px; height:18px; float:left;background-color:#3EBB79;border:1px solid #f0f0f0; cursor:crosshair;" alt="Kelly Green - 3EBB79" title="Kelly Green - 3EBB79" onclick="HTML5ColorSwitch(9,176,62,187,121,'Kelly Green - 3EBB79');"></div>
+                      <div id="Color_9_177" style="width: 18px; height: 18px; float: left; background-color: rgb(142, 251, 64); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Lime Green - 8EFB40" title="Lime Green - 8EFB40" onclick="HTML5ColorSwitch(9,177,142,251,64,'Lime Green - 8EFB40');"></div>
+                      <div id="Color_9_178" style="width: 18px; height: 18px; float: left; background-color: rgb(52, 102, 113); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Dark Ivy - 346671" title="Dark Ivy - 346671" onclick="HTML5ColorSwitch(9,178,52,102,113,'Dark Ivy - 346671');"></div>
+                      <div id="Color_9_179" style="width:18px; height:18px; float:left;background-color:#60A092;border:1px solid #f0f0f0; cursor:crosshair;" alt="Teal - 60A092" title="Teal - 60A092" onclick="HTML5ColorSwitch(9,179,96,160,146,'Teal - 60A092');"></div>
+                      <div id="Color_9_180" style="width:18px; height:18px; float:left;background-color:#60A5B5;border:1px solid #f0f0f0; cursor:crosshair;" alt="Aquamarine - 60A5B5" title="Aquamarine - 60A5B5" onclick="HTML5ColorSwitch(9,180,96,165,181,'Aquamarine - 60A5B5');"></div>
+                      <div id="Color_9_181" style="width:18px; height:18px; float:left;background-color:#08457E;border:1px solid #f0f0f0; cursor:crosshair;" alt="sapphire blue - 08457E" title="sapphire blue - 08457E" onclick="HTML5ColorSwitch(9,181,8,69,126,'sapphire blue - 08457E');"></div>
+                      <div id="Color_9_182" style="width:18px; height:18px; float:left;background-color:#0047AB;border:1px solid #f0f0f0; cursor:crosshair;" alt="Intense Blue - 0047AB" title="Intense Blue - 0047AB" onclick="HTML5ColorSwitch(9,182,0,71,171,'Intense Blue - 0047AB');"></div>
+                      <div id="Color_9_183" style="width: 18px; height: 18px; float: left; background-color: rgb(56, 162, 255); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Medium Blue - 3674BF" title="Medium Blue - 3674BF" onclick="HTML5ColorSwitch(9,183,56,162,255,'Medium Blue - 3674BF');"></div>
+                      <div id="Color_9_184" style="width:18px; height:18px; float:left;background-color:#ABD7FA;border:1px solid #f0f0f0; cursor:crosshair;" alt="Light Blue - ABD7FA" title="Light Blue - ABD7FA" onclick="HTML5ColorSwitch(9,184,171,215,250,'Light Blue - ABD7FA');"></div>
+                      <div id="Color_9_185" style="width: 18px; height: 18px; float: left; background-color: rgb(148, 0, 211); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Violet - 9400D3" title="Violet - 9400D3" onclick="HTML5ColorSwitch(9,185,148,0,211,'Violet - 9400D3');"></div>
+                      <div id="Color_9_187" style="width:18px; height:18px; float:left;background-color:#F5B4CA;border:1px solid #f0f0f0; cursor:crosshair;" alt="Pink - F5B4CA" title="Pink - F5B4CA" onclick="HTML5ColorSwitch(9,187,245,180,202,'Pink - F5B4CA');"></div>
+                      <div id="Color_9_189" style="width:18px; height:18px; float:left;background-color:#875500;border:1px solid #f0f0f0; cursor:crosshair;" alt="Coffee Brown - 736155" title="Coffee Brown - 736155" onclick="HTML5ColorSwitch(9,189,135,85,0,'Coffee Brown - 736155');"></div>
+                      <div id="Color_9_194" style="width: 18px; height: 18px; float: left; background-color: rgb(171, 97, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt=" Brown -8b4f00" title=" Brown -8b4f00" onclick="HTML5ColorSwitch(9,194,171,97,0,' Brown -8b4f00');"></div>
+                      <div id="Color_9_191" style="width: 18px; height: 18px; float: left; background-color: rgb(211, 179, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Gold - d3b300" title="Gold - d3b300" onclick="HTML5ColorSwitch(9,191,211,179,0,'Gold - d3b300');"></div>
+                      <div id="Color_9_190" style="width:18px; height:18px; float:left;background-color:#C0C0C0;border:1px solid #f0f0f0; cursor:crosshair;" alt="Silver - C0C0C0" title="Silver - C0C0C0" onclick="HTML5ColorSwitch(9,190,192,192,192,'Silver - C0C0C0');"></div>
+                      <div id="Color_9_192" style="width:18px; height:18px; float:left;background-color:#d3ffb8;border:1px solid #f0f0f0; cursor:crosshair;" alt="Luminescent - d3ffb8" title="Luminescent - d3ffb8" onclick="HTML5ColorSwitch(9,192,211,255,184,'Luminescent - d3ffb8');"></div>
+                      <div style="clear: both;"></div>
+                    </div>
+                  </div>
+									
+                  <div id="Html5Group_0" class="Html5GroupColorPickers">
+                    <h4 class="Html5GroupName">Preview Background Color:</h4>
+                    <div style="clear:both;"></div>
+                    <div id="Html5Group_0_colors" class="Html5GroupColors">
+                      <div id="Color_0_0" style="width: 18px; height: 18px; float: left; background-color: rgb(255, 255, 255); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="White - FFFFFF" title="White - FFFFFF" onclick="HTML5ColorSwitch(0,0,255,255,255,'White - FFFFFF');"></div>
+                      <div id="Color_0_1" style="width: 18px; height: 18px; float: left; background-color: rgb(0, 0, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Black - 000000" title="Black - 000000" onclick="HTML5ColorSwitch(0,1,0,0,0,'Black - 000000');"></div>
+                      <div id="Color_0_2" style="width: 18px; height: 18px; float: left; background-color: rgb(148, 148, 148); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Dark Grey - 949494" title="Dark Grey - 949494" onclick="HTML5ColorSwitch(0,2,148,148,148,'Dark Grey - 949494');"></div>
+                      <div id="Color_0_3" style="width:18px; height:18px; float:left;background-color:#a7aab0;border:1px solid #f0f0f0; cursor:crosshair;" alt="Grey - a7aab0" title="Grey - a7aab0" onclick="HTML5ColorSwitch(0,3,167,170,176,'Grey - a7aab0');"></div>
+                      <div id="Color_0_4" style="width: 18px; height: 18px; float: left; background-color: rgb(139, 0, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Dark Red - 8B0000" title="Dark Red - 8B0000" onclick="HTML5ColorSwitch(0,4,139,0,0,'Dark Red - 8B0000');"></div>
+                      <div id="Color_0_5" style="width:18px; height:18px; float:left;background-color:#95003e;border:1px solid #f0f0f0; cursor:crosshair;" alt="Cardinal Red - B81832" title="Cardinal Red - B81832" onclick="HTML5ColorSwitch(0,5,149,0,62,'Cardinal Red - B81832');"></div>
+                      <div id="Color_0_6" style="width:18px; height:18px; float:left;background-color:#FF0000;border:1px solid #f0f0f0; cursor:crosshair;" alt="Red - FF0000" title="Red - FF0000" onclick="HTML5ColorSwitch(0,6,255,0,0,'Red - FF0000');"></div>
+                      <div id="Color_0_7" style="width:18px; height:18px; float:left;background-color:#E24E30;border:1px solid #f0f0f0; cursor:crosshair;" alt="Poppy Red - E24E30" title="Poppy Red - E24E30" onclick="HTML5ColorSwitch(0,7,226,78,48,'Poppy Red - E24E30');"></div>
+                      <div id="Color_0_8" style="width:18px; height:18px; float:left;background-color:#E75723;border:1px solid #f0f0f0; cursor:crosshair;" alt="Tomato Red - E75723" title="Tomato Red - E75723" onclick="HTML5ColorSwitch(0,8,231,87,35,'Tomato Red - E75723');"></div>
+                      <div id="Color_0_9" style="width:18px; height:18px; float:left;background-color:#FF7F00;border:1px solid #f0f0f0; cursor:crosshair;" alt="Orange - FF7F00" title="Orange - FF7F00" onclick="HTML5ColorSwitch(0,9,255,127,0,'Orange - FF7F00');"></div>
+                      <div id="Color_0_10" style="width:18px; height:18px; float:left;background-color:#FCC200;border:1px solid #f0f0f0; cursor:crosshair;" alt="Sunflower Yellow - FCC200" title="Sunflower Yellow - FCC200" onclick="HTML5ColorSwitch(0,10,252,194,0,'Sunflower Yellow - FCC200');"></div>
+                      <div id="Color_0_11" style="width:18px; height:18px; float:left;background-color:#FFD300;border:1px solid #f0f0f0; cursor:crosshair;" alt="Primrose Yellow - FFD300" title="Primrose Yellow - FFD300" onclick="HTML5ColorSwitch(0,11,255,211,0,'Primrose Yellow - FFD300');"></div>
+                      <div id="Color_0_12" style="width:18px; height:18px; float:left;background-color:#FDDF01;border:1px solid #f0f0f0; cursor:crosshair;" alt="Yellow - FDDF01" title="Yellow - FDDF01" onclick="HTML5ColorSwitch(0,12,253,223,1,'Yellow - FDDF01');"></div>
+                      <div id="Color_0_13" style="width:18px; height:18px; float:left;background-color:#FFFF00;border:1px solid #f0f0f0; cursor:crosshair;" alt="Light Yellow - FFFF00" title="Light Yellow - FFFF00" onclick="HTML5ColorSwitch(0,13,255,255,0,'Light Yellow - FFFF00');"></div>
+                      <div id="Color_0_14" style="width:18px; height:18px; float:left;background-color:#016E37;border:1px solid #f0f0f0; cursor:crosshair;" alt="Forest Green - 016E37" title="Forest Green - 016E37" onclick="HTML5ColorSwitch(0,14,1,110,55,'Forest Green - 016E37');"></div>
+                      <div id="Color_0_15" style="width:18px; height:18px; float:left;background-color:#288A57;border:1px solid #f0f0f0; cursor:crosshair;" alt="Green - 288A57" title="Green - 288A57" onclick="HTML5ColorSwitch(0,15,40,138,87,'Green - 288A57');"></div>
+                      <div id="Color_0_16" style="width:18px; height:18px; float:left;background-color:#4AB647;border:1px solid #f0f0f0; cursor:crosshair;" alt="Bright Green - 4AB647" title="Bright Green - 4AB647" onclick="HTML5ColorSwitch(0,16,74,182,71,'Bright Green - 4AB647');"></div>
+                      <div id="Color_0_17" style="width:18px; height:18px; float:left;background-color:#3EBB79;border:1px solid #f0f0f0; cursor:crosshair;" alt="Kelly Green - 3EBB79" title="Kelly Green - 3EBB79" onclick="HTML5ColorSwitch(0,17,62,187,121,'Kelly Green - 3EBB79');"></div>
+                      <div id="Color_0_18" style="width:18px; height:18px; float:left;background-color:#8EFB40;border:1px solid #f0f0f0; cursor:crosshair;" alt="Lime Green - 8EFB40" title="Lime Green - 8EFB40" onclick="HTML5ColorSwitch(0,18,142,251,64,'Lime Green - 8EFB40');"></div>
+                      <div id="Color_0_19" style="width: 18px; height: 18px; float: left; background-color: rgb(52, 102, 113); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Dark Ivy - 346671" title="Dark Ivy - 346671" onclick="HTML5ColorSwitch(0,19,52,102,113,'Dark Ivy - 346671');"></div>
+                      <div id="Color_0_20" style="width: 18px; height: 18px; float: left; background-color: rgb(96, 160, 146); border: 1px solid rgb(0, 0, 0); cursor: crosshair;" alt="Teal - 60A092" title="Teal - 60A092" onclick="HTML5ColorSwitch(0,20,96,160,146,'Teal - 60A092');"></div>
+                      <div id="Color_0_21" style="width:18px; height:18px; float:left;background-color:#60A5B5;border:1px solid #f0f0f0; cursor:crosshair;" alt="Aquamarine - 60A5B5" title="Aquamarine - 60A5B5" onclick="HTML5ColorSwitch(0,21,96,165,181,'Aquamarine - 60A5B5');"></div>
+                      <div id="Color_0_22" style="width:18px; height:18px; float:left;background-color:#08457E;border:1px solid #f0f0f0; cursor:crosshair;" alt="sapphire blue - 08457E" title="sapphire blue - 08457E" onclick="HTML5ColorSwitch(0,22,8,69,126,'sapphire blue - 08457E');"></div>
+                      <div id="Color_0_23" style="width: 18px; height: 18px; float: left; background-color: rgb(0, 71, 171); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Intense Blue - 0047AB" title="Intense Blue - 0047AB" onclick="HTML5ColorSwitch(0,23,0,71,171,'Intense Blue - 0047AB');"></div>
+                      <div id="Color_0_24" style="width:18px; height:18px; float:left;background-color:#38a2ff;border:1px solid #f0f0f0; cursor:crosshair;" alt="Medium Blue - 3674BF" title="Medium Blue - 3674BF" onclick="HTML5ColorSwitch(0,24,56,162,255,'Medium Blue - 3674BF');"></div>
+                      <div id="Color_0_25" style="width:18px; height:18px; float:left;background-color:#ABD7FA;border:1px solid #f0f0f0; cursor:crosshair;" alt="Light Blue - ABD7FA" title="Light Blue - ABD7FA" onclick="HTML5ColorSwitch(0,25,171,215,250,'Light Blue - ABD7FA');"></div>
+                      <div id="Color_0_26" style="width: 18px; height: 18px; float: left; background-color: rgb(148, 0, 211); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Violet - 9400D3" title="Violet - 9400D3" onclick="HTML5ColorSwitch(0,26,148,0,211,'Violet - 9400D3');"></div>
+                      <div id="Color_0_27" style="width: 18px; height: 18px; float: left; background-color: rgb(245, 180, 202); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Pink - F5B4CA" title="Pink - F5B4CA" onclick="HTML5ColorSwitch(0,27,245,180,202,'Pink - F5B4CA');"></div>
+                      <div id="Color_0_28" style="width: 18px; height: 18px; float: left; background-color: rgb(135, 85, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Coffee Brown - 736155" title="Coffee Brown - 736155" onclick="HTML5ColorSwitch(0,28,135,85,0,'Coffee Brown - 736155');"></div>
+                      <div id="Color_0_29" style="width: 18px; height: 18px; float: left; background-color: rgb(171, 97, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt=" Brown -8b4f00" title=" Brown -8b4f00" onclick="HTML5ColorSwitch(0,29,171,97,0,' Brown -8b4f00');"></div>
+                      <div id="Color_0_30" style="width: 18px; height: 18px; float: left; background-color: rgb(211, 179, 0); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Gold - d3b300" title="Gold - d3b300" onclick="HTML5ColorSwitch(0,30,211,179,0,'Gold - d3b300');"></div>
+                      <div id="Color_0_31" style="width: 18px; height: 18px; float: left; background-color: rgb(192, 192, 192); border: 1px solid rgb(240, 240, 240); cursor: crosshair;" alt="Silver - C0C0C0" title="Silver - C0C0C0" onclick="HTML5ColorSwitch(0,31,192,192,192,'Silver - C0C0C0');"></div>
+                      <div style="clear: both;"></div>
+                    </div>
+                  </div>
+                </div>
+                <div style="position:absolute;z-index:-9999; display:none;">
+                  <img id="html5image9" src="images/56-9.png" style="visibility:hidden">
+                  <img id="bgimage" src="images/background.png" style="visibility:hidden">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

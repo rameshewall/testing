@@ -1,0 +1,32 @@
+/*  Global */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+/* Design */
+
+#main {
+  margin: 50px auto 0;
+	width: 900px;
+}
+
+#main #column1 {
+  width: 70%;
+}
+
+#main #column2 {
+  width: 30%;
+}
