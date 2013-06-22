@@ -1,0 +1,91 @@
+How to Install Red5 on Ubuntu
+
+If they aren’t already installed, add the following to /etc/apt/sources.list
+deb http://us.archive.ubuntu.com/ubuntu/ lucid multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ lucid multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ lucid-updates multiverse
+deb-src http://us.archive.ubuntu.com/ubuntu/ lucid-updates multiverse
+Then, install some required libraries
+
+apt-get update
+apt-get install java-package
+apt-get install sun-java6-jdk
+apt-get install sun-java6-jre
+apt-get install ant
+apt-get install subversion
+
+Now, download and install Red5
+wget http://www.red5.org/downloads/red5/1_0_1/red5-1.0.1.tar.gz
+tar xvfz red5-0.9.1.tar.gz
+mv red5-0.9.1 red5
+mv red5 /usr/share/
+
+Let’s try running it now:
+cd /usr/share/red5
+sh red5.sh
+
+
+Now try going to http://your-server-address:5080 in a web-browser.
+
+
+/******************
+https://webrtc-experiment.appspot.com/
+
+The above looks very promising
+
+http://openmeetings.apache.org
+
+This have drupal plugin as well - http://openmeetings.apache.org/DrupalPlugin.html
+
+http://code.google.com/p/zlchat2/
+
+
+
+/******************************
+
+Hi Mike,
+
+Can you please handle the following item for Ohio Valley? Note: they "Office
+Schedulers" section of the website is the "Physician Login" page section.
+Sarah can help you access it if you need it.
+
+Thanks,
+Jess
+
+From: "Beekman, Mary Ellen" <MaryEllen.Beekman@myovmc.com>
+Date: Mon, 17 Jun 2013 18:00:24 +0000
+To: sarah shivler <sshivler@oxiem.com>, Jessica Swayze <jswayze@oxiem.com>
+Cc: Steven Leep <Steven.Leep@ovsurgical.com>
+Subject: Ohio Valley - New Forms
+
+Sarah / Jessica ­
+
+Hello! As soon as possible - can you please have the attached forms
+uploaded to the Office Schedulers section of the web site? These forms need
+to replace the ones that are currently there with the same name.
+
+If you have any questions ­ let me know!
+
+Thanks!
+Mary Ellen
+Mary Ellen Beekman
+Business Office Manager
+
+maryellen.beekman@myovmc.com <mailto:maryellen.beekman@myovmc.com>
+p 937.521.3902 | f 937.521.3910
+100 West Main Street, Springfield, Ohio 45502
+
+error while loading shared libraries: libapt-pkg.so.4.12: cannot open shared object file: No such file or directory
+http://182.71.230.131:5080/openmeetings/services/UserService/setUserObjectAndGenerateRoomHashByURLAndRecFlag?
+SID=82ff1fef21d008be545ed891dc059b46
+&username=anonymous+user
+&firstname=anonymous+user
+&lastname=
+&profilePictureUrl=anonymous+user
+&email=anonymous+user
+&externalUserId=0
+&externalUserType=anonymous+user
+&room_id=
+&becomeModeratorAsInt=0
+&showAudioVideoTestAsInt=1
+&allowRecording=
